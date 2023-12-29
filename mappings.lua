@@ -44,6 +44,8 @@ return {
     ["Q"] = { "<nop>" },
 
     ["<leader>s"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = "Search and replace" },
+
+    ["<leader>gt"] = { function() require("gitsigns").toggle_current_line_blame() end, desc = "Toggle Git blame" },
   },
   v = {
     ["J"] = { ":m '>+1<CR>gv=gv" },

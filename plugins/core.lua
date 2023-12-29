@@ -20,6 +20,18 @@ return {
       return opts
     end,
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function(plugin, opts)
+      require("gitsigns").setup {
+        current_line_blame = true,
+        current_line_blame_opts = {
+          delay = 500,
+          virt_text_pos = "right_align",
+        },
+      }
+    end,
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
