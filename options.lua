@@ -7,6 +7,16 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    tabstop = 4, -- sets vim.opt.tabstop
+    softtabstop = 4, -- sets vim.opt.softtabstop,
+    shiftwidth = 4, -- sets vim.opt.shiftwidthshi
+    smartindent = true, -- sets vim.opt.smartindent
+    swapfile = false, -- sets vim.opt.swapfile
+    undofile = true, -- sets vim.opt.undofile
+    backup = false, -- sets vim.opt.backup
+    undodir = os.getenv "HOME" .. "/.vim/undodir", -- sets vim.opt.undodir
+    scrolloff = 15, -- sets vim.opt.scrolloffroll
+    colorcolumn = "100", -- sets vim.opt.colorcolumn
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

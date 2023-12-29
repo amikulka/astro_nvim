@@ -18,12 +18,34 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
+  },
+
+  plugins = {
+    {
+      "goolord/alpha-nvim",
+      opts = function(_, opts)
+        -- customize the dashboard header
+        opts.section.header.val = {
+          "        ███████   ██████",
+          "        ██       ██    ██",
+          "        ██  ███  ██    ██",
+          "        ██   ██  ██    ██",
+          "        ███████   ██████",
+          " ",
+          "  █████  ██      ██  █████  ██    ██",
+          " ██   ██ ██      ██ ██   ██  ██  ██",
+          " ███████ ██  ██  ██ ███████   ████",
+          " ██   ██ ██ ████ ██ ██   ██    ██",
+          " ██   ██ ████  ████ ██   ██    ██",
+        }
+      end,
+    },
   },
 
   lsp = {
@@ -82,4 +104,17 @@ return {
     --   },
     -- }
   end,
+  mappings = {
+    n = {
+      -- Configure Alpha welcome screen when all buffers are closed
+      ["<leader>c"] = {
+        function()
+          local bufs = vim.fn.getbufinfo { buflisted = true }
+          require("astronvim.utils.buffer").close(0)
+          if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+        end,
+        desc = "Close buffer",
+      },
+    },
+  },
 }
