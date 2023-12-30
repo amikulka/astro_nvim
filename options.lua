@@ -27,6 +27,11 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
+    lazygit_use_custom_config_file_path = 1,
+    lazygit_config_file_path = "~/.config/lazygit/config.yml",
+    lazygit_floating_window_winblend = 6,
+    lazygit_floating_window_use_plenary = 1,
+    lazygit_floating_window_scaling_factor = 0.8,
   },
 }
 -- If you need more control, you can use the function()...end notation
