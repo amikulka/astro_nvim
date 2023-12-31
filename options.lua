@@ -5,7 +5,6 @@ return {
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
     spell = false, -- sets vim.opt.spell
-    signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     tabstop = 4, -- sets vim.opt.tabstop
     softtabstop = 4, -- sets vim.opt.softtabstop,
@@ -17,6 +16,10 @@ return {
     undodir = os.getenv "HOME" .. "/.vim/undodir", -- sets vim.opt.undodir
     scrolloff = 15, -- sets vim.opt.scrolloffroll
     colorcolumn = "100", -- sets vim.opt.colorcolumn
+    clipboard = "", -- connection to the system clipboard
+    fillchars = { eob = "~" }, -- disable `~` on nonexistent lines
+    cmdheight = 1, -- hide command line unless needed
+    showmode = true, -- disable showing modes in command line
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
