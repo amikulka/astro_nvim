@@ -1,5 +1,19 @@
 return {
-  { import = "astrocommunity.completion.copilot-lua" },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup {
+        panel = {
+          enabled = false,
+        },
+        suggestion = {
+          auto_trigger = true,
+        },
+      }
+    end,
+  },
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "zbirenbaum/copilot.lua" },
@@ -13,18 +27,22 @@ return {
       end
       if not opts.mapping then opts.mapping = {} end
       opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
-        if copilot.is_visible() then
-          copilot.accept()
-        elseif cmp.visible() then
+        if cmp.visible() then
           cmp.select_next_item()
         elseif luasnip.expand_or_jumpable() then
           luasnip.expand_or_jump()
         elseif has_words_before() then
           cmp.complete()
+        elseif copilot.is_visible() then
+          copilot.accept()
         else
           fallback()
         end
       end, { "i", "s" })
+
+      cmp.event:on("menu_opened", function() vim.b.copilot_suggestion_hidden = true end)
+
+      cmp.event:on("menu_closed", function() vim.b.copilot_suggestion_hidden = false end)
 
       opts.mapping["<C-x>"] = cmp.mapping(function()
         if copilot.is_visible() then copilot.next() end
@@ -53,7 +71,6 @@ return {
       opts.mapping["<C-c>"] = cmp.mapping(function()
         if copilot.is_visible() then copilot.dismiss() end
       end)
-
       return opts
     end,
   },
