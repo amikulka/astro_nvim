@@ -50,6 +50,23 @@ return {
     ["<leader>s"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = "Search and replace" },
 
     ["<leader>gt"] = { function() require("gitsigns").toggle_current_line_blame() end, desc = "Toggle Git blame" },
+
+    -- get rid of new file mapping - I don't like
+    ["<leader>n"] = false,
+    ["<leader>pi"] = false,
+    ["<leader>ps"] = false,
+    ["<leader>pS"] = false,
+    ["<leader>pu"] = false,
+    ["<leader>pU"] = false,
+
+    ["<leader>pa"] = false,
+    ["<leader>pA"] = false,
+    ["<leader>pv"] = false,
+    ["<leader>pl"] = false,
+
+    ["<leader>pm"] = false,
+    ["<leader>pM"] = false,
+    ["<leader> pp"] = { '"+p', desc = "Paste from system clipboard" },
   },
   v = {
     ["J"] = { ":m '>+1<CR>gv=gv" },
@@ -60,9 +77,10 @@ return {
   },
   t = {
     -- setting a mapping to false will disable it
+    --
     -- ["<esc>"] = false,
   },
   x = {
-    ["<leader>p"] = { '"_dp', desc = "Don't loose yank when pasting" },
+    ["<leader>pk"] = { '"_dp', desc = "Don't loose yank when pasting" },
   },
 }
