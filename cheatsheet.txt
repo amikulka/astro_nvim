@@ -22,22 +22,40 @@ Don't lose yank when pasting         | <leader>pp
 Move highlighted line up             | K
 Move highlighted line down           | J
 ##harpoon
-Add file to harpoon                  | <leader><leader>a
-Open harpoon list                    | <leader><leader>e
-Open harpoon files in telescope      | <leader><leader>f
+Add file to harpoon                  | <leader>ha
+Open harpoon list                    | <leader>hl
+Open harpoon files in telescope      | <leader>ht
 Go to harpoon mark 1                 | <C-m>
 Go to harpoon mark 2                 | <C-,>
 Go to harpoon mark 3                 | <C-.>
 Go to harpoon mark 4                 | <C-/>
+##surround
+Add surrounding pair around motion                       | ys[motion][char]
+Add surrounding pair around current line                 | yss[char] 
+Add surrounding pair around motion (w/ new line)         | yS[motion][char]
+Add surrounding pair around current line (w/ new line)   | ySS[motion][char]
+Add surrounding pair around visual                       | [visual]S
+Add surrounding pair around visual (w/ new line)         | [visual]gS
+Change selected surrounding pair                         | cs[old][new]
+Change selected surrounding pair (add new line)          | cs[old][new]
+Delete selected surrounding pair                         | ds[pair]
+Possible surrounding pairs                               | (, {, [, <, ', ", `
+Other Surrounding options                                | t (html tag), f (function)
+Surround alias < >                                       | a
+Surround alias ( )                                       | p
+Surround alias { }                                       | c
+Surround alias [ ]                                       | b
+Surround alias " ' `                                     | q
+Surround alias any (no func/tag)                         | s
 ##LazyGit
 Open LazyGit                         | <leader>gg
 Open LazyGit for current file        | <leader>gf
 ##Sessions
-Save current session                 | <leader Ss
-Load last session                    | <leader Sl
-Delete session                       | <leader Sd
-Search and load session              | <leader Sf
-Load current directory session       | <leader S.
+Save current session                 | <leader>Ss
+Load last session                    | <leader>Sl
+Delete session                       | <leader>Sd
+Search and load session              | <leader>Sf
+Load current directory session       | <leader>S.
 ##select-and-swap
 Select outer part of assignment      | a=
 Select inner part of assignment      | i=
@@ -51,12 +69,16 @@ Swap parameter/argument with next    | <leader>na
 Swap method/function with next       | <leader>nm
 Swap parameter/argument with previous| <leader>na
 Swap method/function with previous   | <leader>nm
-##search-telescope
-Find buffers                         | <leader>fb
-Find word under cursor               | <leader>fc
-Find commands                        | <leader>fC
+##telescope_(search)
+Resume previous search               | <leader>f<CR>
 Find files                           | <leader>ff
 Find all files                       | <leader>fF
+Find words                           | <leader>fw
+Find words in all files              | <leader>fW
+Find word under cursor               | <leader>fc
+Find words in current buffer         | <leader>f/
+Find buffers                         | <leader>fb
+Find commands                        | <leader>fC
 Find help                            | <leader>fh
 Find keymaps                         | <leader>fk
 Find man                             | <leader>fm
@@ -64,8 +86,7 @@ Find notifications                   | <leader>fn
 Find history                         | <leader>fo
 Find registers                       | <leader>fr
 Find themes                          | <leader>ft
-Find words                           | <leader>fw
-Find words in all files              | <leader>fW
+Find marks                           | <leader>f'
 ##toggle-terminal
 Toggle term node                     | <leader>tn
 Toggle term gdu                      | <leader>tu
@@ -75,7 +96,55 @@ Toggle term horizontal split         | <leader>th
 Toggle term vertical split           | <leader>tv
 Toggle terminal                      | <C-'>, <F7>
 ##Debugger
-Start Debugger                       | <F5>
+Debugger: Start/Continue             | <leader><leader>c
+Debugger: Stop/Terminate Session     | <leader><leader>s
+Debugger: Conditional Breakpoint     | <leader><leader>C
+Debugger: Restart                    | <leader><leader>r
+Debugger: Pause                      | <leader><leader>p
+Debugger: Toggle Breakpoint          | <leader><leader>b
+Debugger: Clear Breakpoints          | <leader><leader>B
+Debugger: Step Into                  | <leader><leader>i
+Debugger: Step Over                  | <leader><leader>o
+Debugger: Step Out                   | <leader><leader>u
+Debugger: Close Session              | <leader><leader>q
+Debugger: Toggle REPL                | <leader><leader>t
+Debugger: Run To Cursor              | <leader><leader>R
+Debugger: Evalute Input              | <leader><leader>e
+Debugger: Toggle UI                  | <leader><leader>u
+Debugger: Hover                      | <leader><leader>h
+##Folds
+Toggle Folding                       | zi
+Toggle Fold Under Cursor             | za
+Toggle All Folds Under Cursor        | zA
+Open Fold Under Cursor               | zo
+Open All Folds Under Cursor          | zO
+Close Fold Under Cursor              | zc
+Close All Folds Under Cursor         | zC
+Fold More                            | zm
+Close All Folds                      | zM
+Fold Less                            | zr
+Open All Folds                       | zR
+Peek Fold                            | zp
+##UI-Options
+Toggle autopairs                     | ua
+Toggle background                    | ub
+Toggle autocompletion                | uc
+Toggle color highlight               | uC
+Toggle diagnostics                   | ud
+Toggle signcolumn                    | ug
+Change indent setting                | ui
+Toggle status line                   | ul
+Toggle CodeLens                      | uL
+Change line numbering                | un
+Toggle notifications                 | uN
+Toggle paste mode                    | up
+Toggle spellcheck                    | us
+Toggle conceal                       | uS
+Toggle tabline                       | ut
+Toggle URL highlight                 | uu
+Toggle wrap                          | uw
+Toggle syntax highlighting (buffer)  | uy
+Toggle foldcolumn                    | uh
 ## edit-vim
 Back to normal mode                  | <Esc>
 Cancel command/operation             | <C-c>
