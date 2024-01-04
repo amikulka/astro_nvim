@@ -67,6 +67,8 @@ return {
     ["<leader>pm"] = false,
     ["<leader>pM"] = false,
     ["<leader> pp"] = { '"+p', desc = "Paste from system clipboard" },
+
+    ["<leader>?"] = { function() require("cheatsheet").show_cheatsheet() end, desc = "Open cheatsheet" },
   },
   v = {
     ["J"] = { ":m '>+1<CR>gv=gv" },
