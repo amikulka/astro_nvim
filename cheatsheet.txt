@@ -7,6 +7,75 @@ Close all buffers to the left        | <leader>bl
 Force close buffer                   | <leader>C
 Next buffer                          | <C-n>, <leader>bn
 Previous buffer                      | <C-p>, <leader>bp
+Select buffer with letters           | <leader>bb
+Close buffer with letters            | <leader>bd
+Horizontal split buffer from tabs    | <leader>b\
+Vertical split buffer from tabline   | <leader>b|
+##copy-paste
+Copy to system clipboard             | <leader>y, <D-c>
+Paste from system clipboard          | <leader>pp, <D-v>
+Copy line to system clipboard        | <leader>Y
+Delete without yanking               | <leader>d
+Delete rest of line without yanking  | <leader>D
+Don't lose yank when pasting         | <leader>pp
+##in-visual
+Move highlighted line up             | K
+Move highlighted line down           | J
+##harpoon
+Add file to harpoon                  | <leader><leader>a
+Open harpoon list                    | <leader><leader>e
+Open harpoon files in telescope      | <leader><leader>f
+Go to harpoon mark 1                 | <C-m>
+Go to harpoon mark 2                 | <C-,>
+Go to harpoon mark 3                 | <C-.>
+Go to harpoon mark 4                 | <C-/>
+##LazyGit
+Open LazyGit                         | <leader>gg
+Open LazyGit for current file        | <leader>gf
+##Sessions
+Save current session                 | <leader Ss
+Load last session                    | <leader Sl
+Delete session                       | <leader Sd
+Search and load session              | <leader Sf
+Load current directory session       | <leader S.
+##select-and-swap
+Select outer part of assignment      | a=
+Select inner part of assignment      | i=
+Select right part of assignment      | r=
+Select left part of assignment       | l=
+Select outer part of a method        | am
+Select inner part of a method        | im
+Select around conditional            | ai
+Select inside conditional            | ii
+Swap parameter/argument with next    | <leader>na
+Swap method/function with next       | <leader>nm
+Swap parameter/argument with previous| <leader>na
+Swap method/function with previous   | <leader>nm
+##search-telescope
+Find buffers                         | <leader>fb
+Find word under cursor               | <leader>fc
+Find commands                        | <leader>fC
+Find files                           | <leader>ff
+Find all files                       | <leader>fF
+Find help                            | <leader>fh
+Find keymaps                         | <leader>fk
+Find man                             | <leader>fm
+Find notifications                   | <leader>fn
+Find history                         | <leader>fo
+Find registers                       | <leader>fr
+Find themes                          | <leader>ft
+Find words                           | <leader>fw
+Find words in all files              | <leader>fW
+##toggle-terminal
+Toggle term node                     | <leader>tn
+Toggle term gdu                      | <leader>tu
+Toggle term python                   | <leader>tp
+Toggle term float                    | <leader>tf
+Toggle term horizontal split         | <leader>th
+Toggle term vertical split           | <leader>tv
+Toggle terminal                      | <C-'>, <F7>
+##Debugger
+Start Debugger                       | <F5>
 ## edit-vim
 Back to normal mode                  | <Esc>
 Cancel command/operation             | <C-c>
