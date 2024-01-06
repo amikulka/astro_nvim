@@ -72,20 +72,18 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "pyright",
+      -- "pyright",
     },
-    config = {
-      prolog_lsp = function()
-        return {
-          cmd = {
-            "/Users/aaronmikulka/Library/Caches/pypoetry/virtualenvs/debtsy-rW36AT0e-py3.9/bin/python",
-            "-m",
-            "pyright-langserver",
-            "--stdio",
-          },
-        }
-      end,
-    },
+    -- config = {
+    --   pyright = function()
+    --     return {
+    --       cmd = {
+    --         "pyright-langserver",
+    --         "--stdio",
+    --       },
+    --     }
+    --   end,
+    -- },
   },
 
   -- Configure require("lazy").setup() options
