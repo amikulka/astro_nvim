@@ -122,8 +122,6 @@ return {
 
     ["<leader>y"] = { '"+y', desc = "Copy to system clipboard" },
     ["<leader>d"] = { '"_d', desc = "Delete without yanking" },
-    ["<D-c"] = { '"+y', desc = "Copy to system clipboard" },
-    ["<D-v"] = { '"+p', desc = "Paste from system clipboard" },
     ["<leader><leader>"] = sections.d,
     ["<leader><leader>e"] = { function() require("dapui").eval() end, desc = "Evaluate Input" },
   },

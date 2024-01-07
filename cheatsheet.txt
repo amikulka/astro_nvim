@@ -1,3 +1,18 @@
+##Helpful
+Show details for symbol under cursor   | K 
+Show signature help                    | <leader> lh
+Go to symbol definition                | gd
+Go to symbol declaration               | gD
+Find references of current sybol       | gr, <leader>lR
+Search workspace symbols               | <leader>lG
+Rename current symbol                  | <leader>lr
+Go to the type definition              | gy
+##Diagnostics
+Toggle diagnostics                   | ud
+Hover diagnostics                    | <leader>ld
+Search diagnostics in telescope      | <leader>lD
+Go to previous diagnostic            | [d
+Go to next diagnostic                | ]d
 ## buffer-commands
 Close buffer                         | <leader>c
 Close all buffers except current     | <leader>bc
@@ -10,9 +25,9 @@ Previous buffer                      | <C-p>, <leader>bp
 Select buffer with letters           | <leader>bb
 Close buffer with letters            | <leader>bd
 Horizontal split buffer from tabs    | <leader>b\
-Vertical split buffer from tabline   | <leader>b|
-##copy-paste
-Copy to system clipboard             | <leader>y, <D-c>
+Vertical split buffer from tabline   | <leader>b| 
+##
+C
 Paste from system clipboard          | <leader>pp, <D-v>
 Copy line to system clipboard        | <leader>Y
 Delete without yanking               | <leader>d
@@ -130,7 +145,6 @@ Toggle autopairs                     | ua
 Toggle background                    | ub
 Toggle autocompletion                | uc
 Toggle color highlight               | uC
-Toggle diagnostics                   | ud
 Toggle signcolumn                    | ug
 Change indent setting                | ui
 Toggle status line                   | ul
