@@ -2,7 +2,6 @@ local maps = { n = {} }
 local icon = vim.g.icons_enabled and "󱡀 " or ""
 local conf = require("telescope.config").values
 
-maps.n["<leader>h"] = { desc = icon .. "Harpoon" }
 require("astronvim.utils").set_mappings(maps)
 
 local function toggle_telescope(harpoon_files)
@@ -31,14 +30,25 @@ return {
       "nvim-lua/plenary.nvim",
     },
     cmd = { "Harpoon" },
-    keys = {
-      { "<leader>ha", function() require("harpoon"):list():append() end, desc = "Add file" },
-      {
-        "<leader>he",
-        function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
-        desc = "Toggle quick menu",
+    opts = {
+      settings = {
+        save_on_toggle = true,
+        sync_on_ui_close = true,
+        key = function() return vim.loop.cwd() end,
       },
-      { "<leader>ht", function() toggle_telescope(require("harpoon"):list()) end, desc = "Open harpoon in telescope" },
+    },
+    keys = {
+      { "<leader>a", function() require("harpoon"):list():append() end, desc = icon .. "Harpoon: Add file" },
+      {
+        "<C-e>",
+        function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
+        desc = icon .. "Harpoon: Toggle quick menu",
+      },
+      {
+        "<C-t>",
+        function() toggle_telescope(require("harpoon"):list()) end,
+        desc = icon .. "Harpoon: Open harpoon in telescope",
+      },
 
       -- { "<C-p>", function() require("harpoon"):list():prev() end, desc = "Go to previous mark" },
       -- { "<C-n>", function() require("harpoon"):list():next() end, desc = "Go to next mark" },
