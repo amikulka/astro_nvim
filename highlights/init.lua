@@ -1,3 +1,3 @@
 return {
-  Visual = { bg = "#666666" },
+  -- Visual = { bg = "#666666" },
 }

@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "catppuccin",
+  colorscheme = "carbonfox",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -27,25 +27,25 @@ return {
   },
 
   plugins = {
-    {
-      "goolord/alpha-nvim",
-      opts = function(_, opts)
-        -- customize the dashboard header
-        opts.section.header.val = {
-          "        ███████   ██████",
-          "        ██       ██    ██",
-          "        ██  ███  ██    ██",
-          "        ██   ██  ██    ██",
-          "        ███████   ██████",
-          " ",
-          "  █████  ██      ██  █████  ██    ██",
-          " ██   ██ ██      ██ ██   ██  ██  ██",
-          " ███████ ██  ██  ██ ███████   ████",
-          " ██   ██ ██ ████ ██ ██   ██    ██",
-          " ██   ██ ████  ████ ██   ██    ██",
-        }
-      end,
-    },
+    -- {
+    --   "goolord/alpha-nvim",
+    --   opts = function(_, opts)
+    --     -- customize the dashboard header
+    --     opts.section.header.val = {
+    --       "        ███████   ██████",
+    --       "        ██       ██    ██",
+    --       "        ██  ███  ██    ██",
+    --       "        ██   ██  ██    ██",
+    --       "        ███████   ██████",
+    --       " ",
+    --       "  █████  ██      ██  █████  ██    ██",
+    --       " ██   ██ ██      ██ ██   ██  ██  ██",
+    --       " ███████ ██  ██  ██ ███████   ████",
+    --       " ██   ██ ██ ████ ██ ██   ██    ██",
+    --       " ██   ██ ████  ████ ██   ██    ██",
+    --     }
+    --   end,
+    -- },
   },
 
   lsp = {
