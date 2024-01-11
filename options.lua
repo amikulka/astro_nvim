@@ -7,6 +7,7 @@ return {
     spell = false, -- sets vim.opt.spell
     wrap = false, -- sets vim.opt.wrap
     tabstop = 4, -- sets vim.opt.tabstop
+    title = false,
     softtabstop = 4, -- sets vim.opt.softtabstop,
     shiftwidth = 4, -- sets vim.opt.shiftwidthshi
     smartindent = true, -- sets vim.opt.smartindent
@@ -18,7 +19,7 @@ return {
     colorcolumn = "100", -- sets vim.opt.colorcolumn
     clipboard = "", -- connection to the system clipboard
     fillchars = { eob = "~" }, -- disable `~` on nonexistent lines
-    cmdheight = 1, -- hide command line unless needed
+    cmdheight = 0, -- hide command line unless needed
     showmode = true, -- disable showing modes in command line
   },
   g = {

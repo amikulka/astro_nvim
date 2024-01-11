@@ -34,6 +34,7 @@ return {
     end,
   },
   { "windwp/nvim-autopairs", enabled = false },
+  -- { "rebelot/heirline.nvim", enabled = false },
 
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },

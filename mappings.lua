@@ -111,6 +111,7 @@ return {
     ["<leader>pm"] = false,
     ["<leader>pM"] = false,
     ["<leader>h"] = false,
+		["<leader>="] = vim.lsp.buf.format
   },
   v = {
     ["J"] = { ":m '>+1<CR>gv=gv" },
