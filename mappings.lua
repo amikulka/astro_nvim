@@ -111,7 +111,11 @@ return {
     ["<leader>pm"] = false,
     ["<leader>pM"] = false,
     ["<leader>h"] = false,
-		["<leader>="] = vim.lsp.buf.format
+		["<leader>="] = vim.lsp.buf.format,
+		["<leader>x"] = [[:!chmod +x %<CR>]],
+
+
+	  ["<C-f>"] = { [[:!tmux neww tmux-sessionizer<CR>]], desc = "Open tmux-sessionizer"}
   },
   v = {
     ["J"] = { ":m '>+1<CR>gv=gv" },

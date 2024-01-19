@@ -15,7 +15,6 @@ return {
       vim.keymap.set({ "i", "s" }, "<C-j>", function() copilot.next() end)
       vim.keymap.set({ "i", "s" }, "<C-k>", function() copilot.prev() end)
       vim.keymap.set({ "i", "s" }, "<C-d>", function() copilot.dismiss() end)
-      vim.keymap.set({ "i", "s" }, "<C-c>", function() copilot.dismiss() end)
     end,
   },
   {
